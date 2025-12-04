@@ -4,178 +4,175 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bishwo Prakash Pokharel — Researcher & Cybersecurity Specialist</title>
-  <meta name="description" content="Portfolio of Bishwo Prakash Pokharel — cybersecurity researcher, digital forensics instructor." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Portfolio of Bishwo Prakash Pokharel — cybersecurity researcher, digital forensics instructor" />
   <style>
-    :root {
-      --bg: #0f1724;
-      --card: #121c2e;
-      --accent: #4f46e5;
-      --muted: #9aa4b2;
-      --text: #e6eef7;
-      --border: rgba(255,255,255,0.06);
-      --radius: 12px;
-    }
-    *,
-    *::before,
-    *::after { box-sizing: border-box; }
-    body {
-      font-family: 'Inter', system-ui, sans-serif;
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-      overflow-x: hidden;
-    }
-    header {
-      padding: 2.5rem 1.5rem;
-      text-align: center;
-    }
-    header img {
-      width: 110px;
-      height: 110px;
-      border-radius: var(--radius);
-      background: linear-gradient(135deg, #1e293b, #0f172a);
-      display: block;
-      margin: 0 auto 1rem;
-    }
-    h1 {
-      font-size: 2rem;
-      margin: 0;
-    }
-    p.lead {
-      color: var(--muted);
-      margin: 0.5rem 0;
-    }
-    main {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 1.5rem;
-      padding: 1.5rem;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-    section, aside {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.2rem 1.6rem;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    }
-    .projects, .pubs {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    .project, .pub {
-      padding: 1rem;
-      border-radius: var(--radius);
-      background: rgba(255,255,255,0.02);
-      border: 1px solid var(--border);
-      transition: background 0.2s ease;
-    }
-    .project:hover, .pub:hover {
-      background: rgba(255,255,255,0.06);
-    }
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-    .chip {
-      background: rgba(255,255,255,0.08);
-      padding: 0.4rem 0.8rem;
-      border-radius: 999px;
-      font-size: 0.85rem;
-      color: var(--muted);
-    }
-    footer {
-      text-align: center;
-      color: var(--muted);
-      padding: 1.5rem 0;
-      font-size: 0.8rem;
-    }
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-    .btn {
-      background: var(--accent);
-      color: white;
-      padding: 0.6rem 1rem;
-      border-radius: var(--radius);
-      display: inline-block;
-      font-weight: 600;
-    }
-    .btn:hover {
-      background: #6366f1;
-    }
+    :root{--bg:#0f1724;--card:#0b1220;--muted:#9aa4b2;--accent:#4f46e5;--glass:rgba(255,255,255,0.03)}
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; background:linear-gradient(180deg,#071027 0%, #0f1724 100%); color:#e6eef7; line-height:1.5}
+    .container{max-width:980px;margin:36px auto;padding:28px}
+    header{display:flex;align-items:center;gap:20px}
+    .avatar{width:110px;height:110px;border-radius:14px; background:linear-gradient(135deg,#1f2937,#111827);display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-size:36px}
+    h1{margin:0;font-size:28px}
+    p.lead{color:var(--muted);margin-top:6px}
+    .cta{margin-left:auto;display:flex;gap:8px}
+    .btn{background:var(--accent);color:white;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:600}
+    main{margin-top:28px;display:grid;grid-template-columns:1fr 320px;gap:22px}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.02)}
+    .section-title{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .chip{background:var(--glass);padding:6px 10px;border-radius:999px;color:var(--muted);font-weight:600;font-size:13px}
+    .projects{display:grid;gap:12px}
+    .project{display:flex;gap:12px;align-items:flex-start;padding:12px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.006));border:1px solid rgba(255,255,255,0.02)}
+    .project h4{margin:0 0 6px 0}
+    .meta{color:var(--muted);font-size:13px}
+    .pubs{display:flex;flex-direction:column;gap:8px}
+    footer{margin-top:28px;text-align:center;color:var(--muted);font-size:13px}
+    a.icon{display:inline-block;padding:8px;border-radius:10px;background:rgba(255,255,255,0.02);text-decoration:none;color:inherit}
+    pre.code{background:#071322;padding:12px;border-radius:8px;overflow:auto;color:#cde}
+    @media(max-width:900px){main{grid-template-columns:1fr;}.cta{margin-left:0}}
   </style>
 </head>
 <body>
-  <header>
-    <img src="assets/avatar.png" alt="Bishwo Prakash Pokharel">
-    <h1>Bishwo Prakash Pokharel</h1>
-    <p class="lead">Cybersecurity Researcher. Forensics. AI/ML Security.</p>
-    <div>
-      <a href="https://github.com/bishwo-pp" aria-label="GitHub profile" target="_blank">GitHub</a> ·
-      <a href="https://www.linkedin.com/in/bishwopp/" target="_blank">LinkedIn</a> ·
-      <a href="mailto:bishwo889@hotmail.com">Email</a> ·
-      <a href="/portfolio.pdf" target="_blank">CV</a>
-    </div>
-  </header>
-
-  <main>
-    <section id="about">
-      <h2>About</h2>
-      <p>I am a cybersecurity researcher focused on building resilient, privacy-preserving AI systems for cyber-physical environments and digital forensics. My research bridges RF signal analysis, ML, and blockchain-enabled trust systems.</p>
-
-      <h3>Technical Skills</h3>
-      <div class="skills">
-        <span class="chip">Python</span><span class="chip">PyTorch</span><span class="chip">TensorFlow</span>
-        <span class="chip">Wireshark</span><span class="chip">Docker</span>
-        <span class="chip">Git / GitHub</span>
+  <div class="container">
+    <header>
+      <div class="avatar">BP</div>
+      <div>
+        <h1>Bishwo Prakash Pokharel</h1>
+        <p class="lead">Cybersecurity Researcher • Digital Forensics • AI/ML Security</p>
+        <div style="margin-top:10px;display:flex;gap:8px;align-items:center">
+          <a class="icon" href="https://github.com/bishwo-pp" target="_blank">GitHub</a>
+          <a class="icon" href="https://www.linkedin.com/in/bishwopp/" target="_blank">LinkedIn</a>
+          <a class="icon" href="mailto:bishwo889@hotmail.com">Email</a>
+          <a class="icon" href="/portfolio.pdf" target="_blank">CV (PDF)</a>
+        </div>
       </div>
-    </section>
+      <div class="cta">
+        <a class="btn" href="#research">Research</a>
+        <a class="btn" href="#projects">Projects</a>
+      </div>
+    </header>
 
-    <section id="projects">
-      <h2>Highlighted Projects</h2>
-      <div class="projects" id="github-projects"></div>
-    </section>
+    <main>
+      <section>
+        <div class="card">
+          <div class="section-title"><h3 style="margin:0">About</h3></div>
+          <p>I am a cybersecurity researcher focused on building robust, privacy-preserving, and adversarially resilient AI systems for cyber-physical environments, media forensics, and distributed networks. My work bridges signal analysis (RF), machine learning, digital forensics, and blockchain-enabled trust systems.</p>
+          <div style="margin-top:14px">
+            <div class="section-title"><strong>Research Interests</strong></div>
+            <div class="skills">
+              <span class="chip">Agentic AI</span>
+              <span class="chip">Media Forensics</span>
+              <span class="chip">Adversarial ML</span>
+              <span class="chip">RF Signal Analysis</span>
+              <span class="chip">Privacy-Preserving ML</span>
+              <span class="chip">Blockchain Security</span>
+            </div>
+          </div>
+          <div style="margin-top:14px">
+            <div class="section-title"><strong>Technical Skills</strong></div>
+            <div class="skills">
+              <span class="chip">Python</span>
+              <span class="chip">PyTorch / TensorFlow</span>
+              <span class="chip">Hugging Face</span>
+              <span class="chip">GNU Radio / SDR</span>
+              <span class="chip">Wireshark</span>
+              <span class="chip">Docker</span>
+              <span class="chip">Git / GitHub</span>
+            </div>
+          </div>
+        </div>
 
-    <aside>
-      <h3>Contact</h3>
-      <p>Toronto, ON</p>
-      <p><a href="mailto:bishwo889@hotmail.com">bishwo889@hotmail.com</a></p>
-      <p><a href="tel:+16474502052">+1 647-450-2052</a></p>
-      <a class="btn" href="mailto:bishwo889@hotmail.com">Email Me</a>
-    </aside>
-  </main>
+        <div id="research" class="card" style="margin-top:14px">
+          <div class="section-title"><h3 style="margin:0">Research Summary</h3></div>
+          <p class="meta">Focus: Agentic AI • Media Forensics • Adversarial ML • Multimodal Forensic Pipelines</p>
+          <p>My research aims to strengthen the integrity of intelligent systems by building agentic AI tools for automated forensic analysis and robust models for detecting manipulated or synthesized media. I combine expertise in RF signal analysis, ML-based anomaly detection, and LLM-driven intelligence to design systems capable of triage, provenance checking, and evidence summarization.</p>
+          <ul>
+            <li><strong>AutoGuardX</strong> — AI-driven RF anomaly detection for keyless vehicle systems.</li>
+            <li><strong>FUSE-VAPT</strong> — OSINT + ML for intelligent vulnerability assessment and threat intelligence.</li>
+            <li><strong>Agentic Forensics Assistant</strong> — LLM-based pipeline for metadata analysis and automated reporting.</li>
+          </ul>
+        </div>
 
-  <footer>
-    © 2025 Bishwo Prakash Pokharel
-  </footer>
+        <div id="projects" class="card" style="margin-top:14px">
+          <div class="section-title"><h3 style="margin:0">Selected Projects</h3></div>
+          <div class="projects">
+            <article class="project">
+              <div style="flex:1">
+                <h4>Deepfake Detection Pipeline</h4>
+                <p class="meta">CNN / EfficientNet • Grad-CAM • FaceForensics++</p>
+                <p>Training and evaluation code, explainability (Grad-CAM) notebooks, and sample results. Reproducible instructions included.</p>
+                <p><a href="https://github.com/bishwo-pp/deepfake-detection-pipeline" target="_blank">View on GitHub</a></p>
+              </div>
+            </article>
 
-  <script>
-    // Fetch GitHub repositories dynamically
-    async function loadGitHubProjects() {
-      const res = await fetch('https://api.github.com/users/bishwo-pp/repos?sort=updated');
-      const data = await res.json();
-      const container = document.getElementById('github-projects');
-      data.slice(0, 5).forEach(repo => {
-        const div = document.createElement('div');
-        div.classList.add('project');
-        div.innerHTML = `
-          <h4><a href="${repo.html_url}" target="_blank">${repo.name}</a></h4>
-          <p>${repo.description || 'No description provided.'}</p>
-          <p><strong>Language:</strong> ${repo.language || 'N/A'}</p>
-        `;
-        container.appendChild(div);
-      });
-    }
-    loadGitHubProjects();
-  </script>
+            <article class="project">
+              <div style="flex:1">
+                <h4>Agentic AI Forensics Assistant</h4>
+                <p class="meta">LLM-driven • Streamlit UI • Metadata analysis</p>
+                <p>Prototype agent that extracts metadata, reasons about manipulation likelihood, and generates a forensic summary suitable for investigators.</p>
+                <p><a href="https://github.com/bishwo-pp/agentic-forensics-assistant" target="_blank">View on GitHub</a></p>
+              </div>
+            </article>
+
+            <article class="project">
+              <div style="flex:1">
+                <h4>RF Signal Classifier (AutoGuardX)</h4>
+                <p class="meta">Spectrograms • FFT • SVM / CNN</p>
+                <p>Signal capture, feature extraction, model training and evaluation for detecting amplified/relayed RF transmissions.</p>
+                <p><a href="https://github.com/bishwo-pp/rf-signal-classifier" target="_blank">View on GitHub</a></p>
+              </div>
+            </article>
+
+            <article class="project">
+              <div style="flex:1">
+                <h4>LLM Threat Intelligence Tool</h4>
+                <p class="meta">LLMs for Malware Triage • Structured Output</p>
+                <p>Notebooks demonstrating automated extraction of TTPs and incident summaries using LLMs and heuristics.</p>
+                <p><a href="https://github.com/bishwo-pp/llm-threat-intelligence" target="_blank">View on GitHub</a></p>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:14px">
+          <div class="section-title"><h3 style="margin:0">Publications & Selected Works</h3></div>
+          <div class="pubs">
+            <div><strong>blockHealthSecure</strong> — Information, 2025. <a href="https://doi.org/10.3390/info16020133" target="_blank">DOI</a></div>
+            <div><strong>SmartVAST</strong> — Deep Learning & Blockchain, 2025. <a href="https://doi.org/10.1201/9781003476047-12" target="_blank">DOI</a></div>
+            <div><strong>Blockauth</strong> — Advances in Computational Intelligence, 2025. <a href="https://doi.org/10.4018/979-8-3373-6481-0.ch004" target="_blank">DOI</a></div>
+            <div><strong>Blocklaw (arXiv)</strong> — 2024. <a href="http://dx.doi.org/10.48550/arXiv.2410.06143" target="_blank">arXiv</a></div>
+          </div>
+        </div>
+
+      </section>
+
+      <aside>
+        <div class="card">
+          <div class="section-title"><h4 style="margin:0">Contact</h4></div>
+          <p class="meta">Toronto, ON • bishwo889@hotmail.com • +1 647-450-2052</p>
+          <div style="margin-top:8px"><a class="btn" href="mailto:bishwo889@hotmail.com">Email Me</a></div>
+        </div>
+
+        <div class="card" style="margin-top:14px">
+          <div class="section-title"><h4 style="margin:0">Education & Experience</h4></div>
+          <p class="meta"><strong>M.Phil (ICT)</strong> — Nepal Open University, 2025<br><strong>Postgrad Diploma (Cybersecurity)</strong> — Sault College, 2024</p>
+          <p class="meta"><strong>Industry:</strong><br>CISO – NYXSentinel (2025–Present)<br>Security & Compliance Lead – MyEvaluationPal (2025–Present)</p>
+        </div>
+
+        <div class="card" style="margin-top:14px">
+          <div class="section-title"><h4 style="margin:0">Quick Links</h4></div>
+          <p><a href="https://github.com/bishwo-pp" target="_blank">GitHub</a></p>
+          <p><a href="https://www.linkedin.com/in/bishwopp/" target="_blank">LinkedIn</a></p>
+          <p><a href="/portfolio.pdf" target="_blank">Download CV (PDF)</a></p>
+        </div>
+
+      </aside>
+    </main>
+
+    <footer>
+      © 2025 Bishwo Prakash Pokharel
+    </footer>
+  </div>
 </body>
 </html>
