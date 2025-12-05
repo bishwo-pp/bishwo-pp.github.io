@@ -1,178 +1,1522 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bishwo Prakash Pokharel — Researcher & Cybersecurity Specialist</title>
-  <meta name="description" content="Portfolio of Bishwo Prakash Pokharel — cybersecurity researcher, digital forensics instructor" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bishwo Prakash Pokharel - Cybersecurity Researcher</title>
+  <meta name="description" content="Bishwo Prakash Pokharel - Cybersecurity Researcher, Educator & IT Professional specializing in AI-driven threat detection, blockchain security, and digital forensics.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root{--bg:#0f1724;--card:#0b1220;--muted:#9aa4b2;--accent:#4f46e5;--glass:rgba(255,255,255,0.03)}
-    *{box-sizing:border-box}
-    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; background:linear-gradient(180deg,#071027 0%, #0f1724 100%); color:#e6eef7; line-height:1.5}
-    .container{max-width:980px;margin:36px auto;padding:28px}
-    header{display:flex;align-items:center;gap:20px}
-    .avatar{width:110px;height:110px;border-radius:14px; background:linear-gradient(135deg,#1f2937,#111827);display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-size:36px}
-    h1{margin:0;font-size:28px}
-    p.lead{color:var(--muted);margin-top:6px}
-    .cta{margin-left:auto;display:flex;gap:8px}
-    .btn{background:var(--accent);color:white;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:600}
-    main{margin-top:28px;display:grid;grid-template-columns:1fr 320px;gap:22px}
-    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.02)}
-    .section-title{display:flex;align-items:center;gap:10px;margin-bottom:12px}
-    .skills{display:flex;flex-wrap:wrap;gap:8px}
-    .chip{background:var(--glass);padding:6px 10px;border-radius:999px;color:var(--muted);font-weight:600;font-size:13px}
-    .projects{display:grid;gap:12px}
-    .project{display:flex;gap:12px;align-items:flex-start;padding:12px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.006));border:1px solid rgba(255,255,255,0.02)}
-    .project h4{margin:0 0 6px 0}
-    .meta{color:var(--muted);font-size:13px}
-    .pubs{display:flex;flex-direction:column;gap:8px}
-    footer{margin-top:28px;text-align:center;color:var(--muted);font-size:13px}
-    a.icon{display:inline-block;padding:8px;border-radius:10px;background:rgba(255,255,255,0.02);text-decoration:none;color:inherit}
-    pre.code{background:#071322;padding:12px;border-radius:8px;overflow:auto;color:#cde}
-    @media(max-width:900px){main{grid-template-columns:1fr;}.cta{margin-left:0}}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg-primary: #0d1117;
+      --bg-secondary: #161b22;
+      --bg-card: #1c2128;
+      --accent: #2dd4bf;
+      --accent-dim: rgba(45, 212, 191, 0.1);
+      --accent-border: rgba(45, 212, 191, 0.3);
+      --text-primary: #e6edf3;
+      --text-secondary: #8b949e;
+      --text-muted: #6e7681;
+      --border: #30363d;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(13, 17, 23, 0.9);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+      border: 2px solid var(--accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .nav-cta {
+      background: var(--accent);
+      color: var(--bg-primary);
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      transition: all 0.3s;
+    }
+
+    .nav-cta:hover {
+      background: #5eead4;
+      transform: translateY(-2px);
+    }
+
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 10px;
+    }
+
+    .mobile-menu span {
+      width: 25px;
+      height: 2px;
+      background: var(--text-primary);
+      transition: 0.3s;
+    }
+
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 20% 50%, rgba(45, 212, 191, 0.08) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .hero-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero-image {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+
+    .profile-circle {
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      border: 3px solid var(--accent);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .profile-circle::before {
+      content: '';
+      position: absolute;
+      inset: -15px;
+      border-radius: 50%;
+      border: 1px solid var(--accent-border);
+    }
+
+    .profile-circle img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .experience-badge {
+      position: absolute;
+      bottom: 40px;
+      right: 20px;
+      background: var(--bg-card);
+      border: 1px solid var(--accent-border);
+      border-radius: 12px;
+      padding: 16px 20px;
+      text-align: center;
+    }
+
+    .experience-badge .number {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    .experience-badge .label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-secondary);
+    }
+
+    .hero-content {
+      max-width: 600px;
+    }
+
+    .hero-subtitle {
+      color: var(--accent);
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 16px;
+    }
+
+    .hero-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 56px;
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 8px;
+    }
+
+    .hero-title .accent {
+      color: var(--accent);
+    }
+
+    .hero-role {
+      color: var(--accent);
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    .hero-description {
+      color: var(--text-secondary);
+      font-size: 16px;
+      margin-bottom: 32px;
+      line-height: 1.7;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 24px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+      transition: all 0.3s;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: var(--bg-primary);
+    }
+
+    .btn-primary:hover {
+      background: #5eead4;
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-primary);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .social-links {
+      display: flex;
+      gap: 12px;
+    }
+
+    .social-link {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .social-link:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: var(--accent-dim);
+    }
+
+    /* Section Styles */
+    section {
+      padding: 100px 0;
+    }
+
+    .section-label {
+      color: var(--accent);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 40px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .section-description {
+      color: var(--text-secondary);
+      font-size: 16px;
+      max-width: 600px;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-header .section-description {
+      margin: 0 auto;
+    }
+
+    /* About Section */
+    .about {
+      background: var(--bg-secondary);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .about-content h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .about-content p {
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+      line-height: 1.8;
+    }
+
+    .about-list {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+    }
+
+    .about-list li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--text-secondary);
+    }
+
+    .about-list li::before {
+      content: '→';
+      color: var(--accent);
+    }
+
+    .about-cards {
+      display: grid;
+      gap: 20px;
+    }
+
+    .about-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+    }
+
+    .about-card h4 {
+      font-size: 14px;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .about-card p {
+      color: var(--text-secondary);
+      font-size: 14px;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: 60px;
+    }
+
+    .stat-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+    }
+
+    .stat-card .number {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    .stat-card .label {
+      color: var(--text-secondary);
+      font-size: 14px;
+      margin-top: 8px;
+    }
+
+    /* Skills Section */
+    .skills-section {
+      background: var(--bg-primary);
+    }
+
+    .skills-category {
+      margin-bottom: 48px;
+    }
+
+    .skills-category h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: var(--text-primary);
+    }
+
+    .skills-category h4 {
+      font-size: 14px;
+      color: var(--accent);
+      margin-bottom: 16px;
+      margin-top: 24px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tag {
+      background: var(--accent-dim);
+      border: 1px solid var(--accent-border);
+      color: var(--accent);
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .tag-secondary {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+    }
+
+    /* Experience Section */
+    .experience-section {
+      background: var(--bg-secondary);
+    }
+
+    .experience-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .experience-column h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 24px;
+      margin-bottom: 24px;
+      color: var(--accent);
+    }
+
+    .timeline-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 16px;
+      transition: all 0.3s;
+    }
+
+    .timeline-item:hover {
+      border-color: var(--accent-border);
+    }
+
+    .timeline-item h4 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 16px;
+      margin-bottom: 4px;
+    }
+
+    .timeline-item .company {
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 4px;
+      font-size: 14px;
+    }
+
+    .timeline-item .date {
+      color: var(--text-muted);
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+
+    .timeline-item p {
+      color: var(--text-secondary);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .experience-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Services Section */
+    .services-section {
+      background: var(--bg-primary);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .service-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+      transition: all 0.3s;
+    }
+
+    .service-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-4px);
+    }
+
+    .service-card .icon {
+      width: 48px;
+      height: 48px;
+      background: var(--accent-dim);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .service-card h4 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+
+    .service-card p {
+      color: var(--text-secondary);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    /* Projects Section */
+    .projects-section {
+      background: var(--bg-secondary);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .project-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+      transition: all 0.3s;
+    }
+
+    .project-card:hover {
+      border-color: var(--accent);
+    }
+
+    .project-card h4 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    .project-card p {
+      color: var(--text-secondary);
+      font-size: 14px;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .project-link {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .project-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Publications Section */
+    .publications-section {
+      background: var(--bg-primary);
+    }
+
+    .publication-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 16px;
+      transition: all 0.3s;
+    }
+
+    .publication-card:hover {
+      border-color: var(--accent-border);
+    }
+
+    .publication-card h4 {
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    .publication-card .author {
+      color: var(--text-secondary);
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+
+    .publication-card .meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .publication-type {
+      background: var(--accent-dim);
+      color: var(--accent);
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    /* Research Section */
+    .research-section {
+      background: var(--bg-secondary);
+    }
+
+    .research-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .research-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      transition: all 0.3s;
+    }
+
+    .research-card:hover {
+      border-color: var(--accent);
+    }
+
+    .research-card h4 {
+      font-size: 16px;
+      margin-bottom: 8px;
+      color: var(--accent);
+    }
+
+    .research-card p {
+      color: var(--text-secondary);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    /* Contact Section */
+    .contact-section {
+      background: var(--bg-primary);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+    }
+
+    .contact-info h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 24px;
+      margin-bottom: 32px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .contact-item .icon {
+      width: 44px;
+      height: 44px;
+      background: var(--accent-dim);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .contact-item .label {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .contact-item .value {
+      color: var(--text-primary);
+    }
+
+    .contact-item a {
+      color: var(--text-primary);
+      text-decoration: none;
+    }
+
+    .contact-item a:hover {
+      color: var(--accent);
+    }
+
+    .contact-form {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin-bottom: 8px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      background: var(--bg-primary);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px 16px;
+      color: var(--text-primary);
+      font-size: 14px;
+      font-family: inherit;
+      transition: all 0.3s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+
+    .form-group textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .form-submit {
+      width: 100%;
+      background: var(--accent);
+      color: var(--bg-primary);
+      border: none;
+      padding: 16px;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .form-submit:hover {
+      background: #5eead4;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border);
+      padding: 40px 0;
+      text-align: center;
+    }
+
+    footer p {
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .hero-container,
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .hero-image {
+        order: -1;
+      }
+
+      .services-grid,
+      .research-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .mobile-menu {
+        display: flex;
+      }
+
+      .hero-title {
+        font-size: 36px;
+      }
+
+      .section-title {
+        font-size: 28px;
+      }
+
+      .profile-circle {
+        width: 240px;
+        height: 240px;
+      }
+
+      .profile-initials {
+        font-size: 60px;
+      }
+
+      .services-grid,
+      .projects-grid,
+      .research-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+      }
+
+      .btn {
+        justify-content: center;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div class="avatar">BP</div>
-      <div>
-        <h1>Bishwo Prakash Pokharel</h1>
-        <p class="lead">Cybersecurity Researcher • Digital Forensics • AI/ML Security</p>
-        <div style="margin-top:10px;display:flex;gap:8px;align-items:center">
-          <a class="icon" href="https://github.com/bishwo-pp" target="_blank">GitHub</a>
-          <a class="icon" href="https://www.linkedin.com/in/bishwopp/" target="_blank">LinkedIn</a>
-          <a class="icon" href="mailto:bishwo889@hotmail.com">Email</a>
-          <a class="icon" href="/portfolio.pdf" target="_blank">CV (PDF)</a>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <div class="logo-icon">○</div>
+        BP
+      </a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta">Get In Touch</a>
+      <div class="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="container hero-container">
+      <div class="hero-image">
+        <div class="profile-circle">
+          <img src="/PHoto.jpg" alt="Bishwo Prakash Pokharel">
+        </div>
+        <div class="experience-badge">
+          <div class="number">10+</div>
+          <div class="label">Years of<br>Experience</div>
         </div>
       </div>
-      <div class="cta">
-        <a class="btn" href="#research">Research</a>
-        <a class="btn" href="#projects">Projects</a>
-      </div>
-    </header>
-
-    <main>
-      <section>
-        <div class="card">
-          <div class="section-title"><h3 style="margin:0">About</h3></div>
-          <p>I am a cybersecurity researcher focused on building robust, privacy-preserving, and adversarially resilient AI systems for cyber-physical environments, media forensics, and distributed networks. My work bridges signal analysis (RF), machine learning, digital forensics, and blockchain-enabled trust systems.</p>
-          <div style="margin-top:14px">
-            <div class="section-title"><strong>Research Interests</strong></div>
-            <div class="skills">
-              <span class="chip">Agentic AI</span>
-              <span class="chip">Media Forensics</span>
-              <span class="chip">Adversarial ML</span>
-              <span class="chip">RF Signal Analysis</span>
-              <span class="chip">Privacy-Preserving ML</span>
-              <span class="chip">Blockchain Security</span>
-            </div>
-          </div>
-          <div style="margin-top:14px">
-            <div class="section-title"><strong>Technical Skills</strong></div>
-            <div class="skills">
-              <span class="chip">Python</span>
-              <span class="chip">PyTorch / TensorFlow</span>
-              <span class="chip">Hugging Face</span>
-              <span class="chip">GNU Radio / SDR</span>
-              <span class="chip">Wireshark</span>
-              <span class="chip">Docker</span>
-              <span class="chip">Git / GitHub</span>
-            </div>
-          </div>
+      <div class="hero-content">
+        <p class="hero-subtitle">Hello, I'm</p>
+        <h1 class="hero-title">Bishwo Prakash<br><span class="accent">Pokharel</span></h1>
+        <p class="hero-role">Cybersecurity Researcher • Educator • IT Professional</p>
+        <p class="hero-description">Specializing in AI-driven threat detection, secure infrastructure, blockchain security, and digital forensics. Protecting digital assets and building secure systems.</p>
+        <div class="hero-buttons">
+          <a href="/bishwo_resume.pdf" class="btn btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download Resume
+          </a>
+          <a href="#publications" class="btn btn-secondary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+            View Publications
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Contact Me
+          </a>
         </div>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/bishwopp/" class="social-link" target="_blank" aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://github.com/bishwo-pp" class="social-link" target="_blank" aria-label="GitHub">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="https://www.researchgate.net/profile/Bishwo-Prakash-Pokharel-2" class="social-link" target="_blank" aria-label="ResearchGate">
+           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="https://scholar.google.com/citations?user=ePBWDngAAAAJ&hl=en" class="social-link" target="_blank" aria-label="GoogleScholar">
+           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><<path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/></svg>
+          </a> 
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <div id="research" class="card" style="margin-top:14px">
-          <div class="section-title"><h3 style="margin:0">Research Summary</h3></div>
-          <p class="meta">Focus: Agentic AI • Media Forensics • Adversarial ML • Multimodal Forensic Pipelines</p>
-          <p>My research aims to strengthen the integrity of intelligent systems by building agentic AI tools for automated forensic analysis and robust models for detecting manipulated or synthesized media. I combine expertise in RF signal analysis, ML-based anomaly detection, and LLM-driven intelligence to design systems capable of triage, provenance checking, and evidence summarization.</p>
-          <ul>
-            <li><strong>AutoGuardX</strong> — AI-driven RF anomaly detection for keyless vehicle systems.</li>
-            <li><strong>FUSE-VAPT</strong> — OSINT + ML for intelligent vulnerability assessment and threat intelligence.</li>
-            <li><strong>Agentic Forensics Assistant</strong> — LLM-based pipeline for metadata analysis and automated reporting.</li>
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <p class="section-label">Know Me More</p>
+      <h2 class="section-title">About Me</h2>
+      <div class="about-grid">
+        <div class="about-content">
+          <p><strong>Bishwo Prakash Pokharel</strong> is a cybersecurity researcher, educator, and IT professional. His expertise spans network security, cyber forensics, blockchain technology, and artificial intelligence.</p>
+          <p>He has contributed to multiple research publications integrating AI and blockchain into cybersecurity frameworks. His academic teaching spans Nepal Open University, Tribhuvan University, Pokhara University, Purbanchal University and more.</p>
+
+          <h3> Academic Achievements</h3>
+          <ul class="about-list">
+            <li>M.Phil in Information, Communication, and Technology, Nepal Open University, Nepal (2023) | CGPA 3.71/4.0</li>
+            <li>PG Diploma in Cybersecurity, Sault College of Applied Arts and Technology, Canada (2024) | CGPA 4.0/4.0</li>
+            <li>Masters of Computer Application, Indira Gandhi National Open University, India (2017)</li>
+            <li>Bachelors of Computer Application, Pokhara University, Nepal (2012)</li>
           </ul>
         </div>
+        <div class="about-cards">
+          <div class="about-card">
+            <h4>Research Focus</h4>
+            <p>AI-driven anomaly detection, digital forensics, and blockchain security</p>
+          </div>
+          <div class="about-card">
+            <h4>Academic Experience</h4>
+            <p>Teaching across multiple universities in Nepal and Canada for Undergraduate and Graduate Students</p>
+          </div>
+          <div class="about-card">
+            <h4>Innovation</h4>
+            <p>Integrating AI and blockchain into cybersecurity frameworks</p>
+          </div>
+        </div>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="number">500+</div>
+          <div class="label">Students Taught</div>
+        </div>
+        <div class="stat-card">
+          <div class="number">20+</div>
+          <div class="label">Projects Completed</div>
+        </div>
+        <div class="stat-card">
+          <div class="number">10+</div>
+          <div class="label">Years Experience</div>
+        </div>
+        <div class="stat-card">
+          <div class="number">20+</div>
+          <div class="label">Publications</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <div id="projects" class="card" style="margin-top:14px">
-          <div class="section-title"><h3 style="margin:0">Selected Projects</h3></div>
-          <div class="projects">
-            <article class="project">
-              <div style="flex:1">
-                <h4>Deepfake Detection Pipeline</h4>
-                <p class="meta">CNN / EfficientNet • Grad-CAM • FaceForensics++</p>
-                <p>Training and evaluation code, explainability (Grad-CAM) notebooks, and sample results. Reproducible instructions included.</p>
-                <p><a href="https://github.com/bishwo-pp/deepfake-detection-pipeline" target="_blank">View on GitHub</a></p>
-              </div>
-            </article>
+  <!-- Skills Section -->
+  <section class="skills-section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">My Expertise</p>
+        <h2 class="section-title">Skills & Tools</h2>
+        <p class="section-description">Comprehensive expertise across cybersecurity domains</p>
+      </div>
 
-            <article class="project">
-              <div style="flex:1">
-                <h4>Agentic AI Forensics Assistant</h4>
-                <p class="meta">LLM-driven • Streamlit UI • Metadata analysis</p>
-                <p>Prototype agent that extracts metadata, reasons about manipulation likelihood, and generates a forensic summary suitable for investigators.</p>
-                <p><a href="https://github.com/bishwo-pp/agentic-forensics-assistant" target="_blank">View on GitHub</a></p>
-              </div>
-            </article>
+      <div class="skills-category">
+        <h3>Core Competencies</h3>
+        <div class="tags">
+          <span class="tag">Agile Methodology</span>
+          <span class="tag">SIEM</span>
+          <span class="tag">Penetration Testing</span>
+          <span class="tag">Risk Management</span>
+          <span class="tag">Cyber Security</span>
+          <span class="tag">Data Security</span>
+          <span class="tag">Forensic Analysis</span>
+          <span class="tag">Incident Response</span>
+          <span class="tag">Logs Management</span>
+          <span class="tag">Network Security</span>
+          <span class="tag">Security Audit</span>
+          <span class="tag">Cryptography</span>
+          <span class="tag">Threat Detection</span>
+          <span class="tag">Vulnerability Analysis</span>
+          <span class="tag">Training & Development</span>
+          <span class="tag">Port Scanning</span>
+          <span class="tag">IAM</span>
+          <span class="tag">Cloud Security</span>
+          <span class="tag">Ticket Management</span>
+        </div>
+      </div>
 
-            <article class="project">
-              <div style="flex:1">
-                <h4>RF Signal Classifier (AutoGuardX)</h4>
-                <p class="meta">Spectrograms • FFT • SVM / CNN</p>
-                <p>Signal capture, feature extraction, model training and evaluation for detecting amplified/relayed RF transmissions.</p>
-                <p><a href="https://github.com/bishwo-pp/rf-signal-classifier" target="_blank">View on GitHub</a></p>
-              </div>
-            </article>
+      <div class="skills-category">
+        <h3>Tools & Technologies</h3>
+        
+        <h4>Cybersecurity & Threat Analysis</h4>
+        <div class="tags">
+          <span class="tag tag-secondary">YARA</span>
+          <span class="tag tag-secondary">MISP</span>
+          <span class="tag tag-secondary">OpenCTI</span>
+          <span class="tag tag-secondary">Aurora EDR</span>
+          <span class="tag tag-secondary">Mandiant Redline</span>
+          <span class="tag tag-secondary">Velociraptor</span>
+          <span class="tag tag-secondary">Sysmon</span>
+          <span class="tag tag-secondary">Wazuh</span>
+          <span class="tag tag-secondary">Snort</span>
+          <span class="tag tag-secondary">Flarevm</span>
+          <span class="tag tag-secondary">Sysinternals</span>
+        </div>
 
-            <article class="project">
-              <div style="flex:1">
-                <h4>LLM Threat Intelligence Tool</h4>
-                <p class="meta">LLMs for Malware Triage • Structured Output</p>
-                <p>Notebooks demonstrating automated extraction of TTPs and incident summaries using LLMs and heuristics.</p>
-                <p><a href="https://github.com/bishwo-pp/llm-threat-intelligence" target="_blank">View on GitHub</a></p>
-              </div>
-            </article>
+        <h4>Malware Analysis & Forensics</h4>
+        <div class="tags">
+          <span class="tag tag-secondary">Ghidra</span>
+          <span class="tag tag-secondary">MobSF</span>
+          <span class="tag tag-secondary">Cuckoo Sandbox</span>
+          <span class="tag tag-secondary">ViperMonkey</span>
+          <span class="tag tag-secondary">peStudio</span>
+          <span class="tag tag-secondary">Windows Forensics</span>
+          <span class="tag tag-secondary">KAPE</span>
+          <span class="tag tag-secondary">Registry Analysis</span>
+        </div>
 
+        <h4>Cloud & Container Security</h4>
+        <div class="tags">
+          <span class="tag tag-secondary">Falco</span>
+          <span class="tag tag-secondary">Kube-Bench</span>
+          <span class="tag tag-secondary">Docker-Bench-Security</span>
+          <span class="tag tag-secondary">Trivy</span>
+          <span class="tag tag-secondary">Lynis</span>
+          <span class="tag tag-secondary">Clair</span>
+          <span class="tag tag-secondary">Anchore Engine</span>
+          <span class="tag tag-secondary">Sysdig</span>
+          <span class="tag tag-secondary">StackRox</span>
+          <span class="tag tag-secondary">Kyverno</span>
+        </div>
+
+        <h4>Programming & Scripting</h4>
+        <div class="tags">
+          <span class="tag tag-secondary">Python</span>
+          <span class="tag tag-secondary">PowerShell</span>
+          <span class="tag tag-secondary">BASH</span>
+          <span class="tag tag-secondary">SQL</span>
+        </div>
+
+        <h4>Platforms & Tools</h4>
+        <div class="tags">
+          <span class="tag tag-secondary">Microsoft Azure</span>
+          <span class="tag tag-secondary">WAF</span>
+          <span class="tag tag-secondary">Autopsy</span>
+          <span class="tag tag-secondary">Oracle VM</span>
+          <span class="tag tag-secondary">VMWARE</span>
+          <span class="tag tag-secondary">Zendesk</span>
+          <span class="tag tag-secondary">ServiceNow</span>
+          <span class="tag tag-secondary">JIRA</span>
+        </div>
+
+        <h4>Operating Systems</h4>
+        <div class="tags">
+          <span class="tag tag-secondary">Windows</span>
+          <span class="tag tag-secondary">Linux (Kali/Ubuntu)</span>
+          <span class="tag tag-secondary">MacOS</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section class="experience-section" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">My Journey</p>
+        <h2 class="section-title">Professional Experience</h2>
+      </div>
+
+      <div class="experience-grid">
+        <div class="experience-column">
+          <h3>Industry Experience</h3>
+          <div class="timeline-item">
+            <h4>Chief Information Security Officer (CISO)</h4>
+            <p class="company">NYXSentinel</p>
+            <p class="date">July 2025 – Present</p>
+            <p>Developed security/compliance platform, managed audit frameworks, optimized delivery workflows, improved QA and timelines.</p>
+          </div>
+          <div class="timeline-item">
+            <h4>Security and Compliance Lead</h4>
+            <p class="company">MyEvaluationPal</p>
+            <p class="date">June 2025 – Present</p>
+            <p>Led SOC2/ISO27001, conducted risk assessments, embedded security in SDLC, and delivered organization-wide training.</p>
+          </div>
+          <div class="timeline-item">
+            <h4>Assistant Department Manager</h4>
+            <p class="company">Farm Boy Company</p>
+            <p class="date">January 2023 – Present</p>
+            <p>Assisted the development of the team by supporting training, coaching and recognition while maintaining a high level of confidentiality and trust.</p>
           </div>
         </div>
 
-        <div class="card" style="margin-top:14px">
-          <div class="section-title"><h3 style="margin:0">Publications & Selected Works</h3></div>
-          <div class="pubs">
-            <div><strong>blockHealthSecure</strong> — Information, 2025. <a href="https://doi.org/10.3390/info16020133" target="_blank">DOI</a></div>
-            <div><strong>SmartVAST</strong> — Deep Learning & Blockchain, 2025. <a href="https://doi.org/10.1201/9781003476047-12" target="_blank">DOI</a></div>
-            <div><strong>Blockauth</strong> — Advances in Computational Intelligence, 2025. <a href="https://doi.org/10.4018/979-8-3373-6481-0.ch004" target="_blank">DOI</a></div>
-            <div><strong>Blocklaw (arXiv)</strong> — 2024. <a href="http://dx.doi.org/10.48550/arXiv.2410.06143" target="_blank">arXiv</a></div>
+        <div class="experience-column">
+          <h3>Teaching Experience</h3>
+          <div class="timeline-item">
+            <h4>Cybersecurity and Digital Forensics Instructor</h4>
+            <p class="company">Nepal Open University</p>
+            <p class="date">2025 – present</p>
+            <p>Taught Cybersecurity and Digital Forensics courses to graduate students.</p>
+          </div>
+          <div class="timeline-item">
+            <h4>BCA Program Coordinator & Instructor</h4>
+            <p class="company">Sungava College, TU</p>
+            <p class="date">2018 – 2022</p>
+            <p>Taught different courses for Undergraduate students: Computer Fundamentals & Application, Microprocessor & Computer Architecture, Web Technology, Database Management System, Computer Graphics & Animation, Artificial Intelligence, Distributed System</p>
+          </div>
+          <div class="timeline-item">
+            <h4>Instructor</h4>
+            <p class="company">Presidency College, PU</p>
+            <p class="date">2016 – 2022</p>
+            <p>Taught different courses for Undergraduate and Graduate students: Database Management System, Management Information System, E-commerce</p>
+          </div>
+           <div class="timeline-item">
+            <h4>Instructor</h4>
+            <p class="company">Oxford College of Engineering & Management, PoU</p>
+            <p class="date">2012 – 2022</p>
+            <p>Taught different courses for Undergraduate students: Fundamentals of Electrical and Electronics, Microprocessor, Operating System, Mathematical Foundations of Compuer Science</p>
+          </div>
+          <div class="timeline-item">
+            <h4>Instructor</h4>
+            <p class="company">Lumbini ICT Campus, TU</p>
+            <p class="date">2017 – 2018</p>
+            <p>Taught different courses for Undergraduate sudents: Programming in C, Discrete Structure, Operating System, Cognitive Science, Artificial Intelligence, Software Project Management</p>
+          </div>
+          <div class="timeline-item">
+            <h4>Instructor</h4>
+            <p class="company">Chitwan College of Technology, TU</p>
+            <p class="date">2015 – 2018</p>
+            <p>Taught different courses for Undergraduate students: Introduction to IT, Digital Logic, Discrete Structure, Operating System, Computer Graphics, Artificial Intelligence, Software Engineering, Software Project Management, Geographical Information System</p>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
 
-      </section>
+  <!-- Services Section -->
+  <section class="services-section" id="services">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">What I Offer</p>
+        <h2 class="section-title">Professional Services</h2>
+        <p class="section-description">Comprehensive cybersecurity solutions for organizations</p>
+      </div>
 
-      <aside>
-        <div class="card">
-          <div class="section-title"><h4 style="margin:0">Contact</h4></div>
-          <p class="meta">Toronto, ON • bishwo889@hotmail.com • +1 647-450-2052</p>
-          <div style="margin-top:8px"><a class="btn" href="mailto:bishwo889@hotmail.com">Email Me</a></div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="icon">🔍</div>
+          <h4>Vulnerability Assessment & Penetration Testing</h4>
+          <p>End-to-end assessment covering networks/web apps with OSINT-enhanced methodologies.</p>
         </div>
-
-        <div class="card" style="margin-top:14px">
-          <div class="section-title"><h4 style="margin:0">Education & Experience</h4></div>
-          <p class="meta"><strong>M.Phil (ICT)</strong> — Nepal Open University, 2025<br><strong>Postgrad Diploma (Cybersecurity)</strong> — Sault College, 2024</p>
-          <p class="meta"><strong>Industry:</strong><br>CISO – NYXSentinel (2025–Present)<br>Security & Compliance Lead – MyEvaluationPal (2025–Present)</p>
+        <div class="service-card">
+          <div class="icon">🔌</div>
+          <h4>API Scanning</h4>
+          <p>Schema-based automated and manual testing for APIs.</p>
         </div>
-
-        <div class="card" style="margin-top:14px">
-          <div class="section-title"><h4 style="margin:0">Quick Links</h4></div>
-          <p><a href="https://github.com/bishwo-pp" target="_blank">GitHub</a></p>
-          <p><a href="https://www.linkedin.com/in/bishwopp/" target="_blank">LinkedIn</a></p>
-          <p><a href="/portfolio.pdf" target="_blank">Download CV (PDF)</a></p>
+        <div class="service-card">
+          <div class="icon">📋</div>
+          <h4>Governance, Risk & Compliance</h4>
+          <p>SOC2, HIPAA, GDPR, ISO 27001 readiness, risk assessments, compliance mapping.</p>
         </div>
+        <div class="service-card">
+          <div class="icon">🛡️</div>
+          <h4>Security Consultation</h4>
+          <p>Designing secure architectures, SDLC integration, cloud security advisories, vCISO.</p>
+        </div>
+        <div class="service-card">
+          <div class="icon">📚</div>
+          <h4>Security Awareness Training</h4>
+          <p>Customized training modules for phishing, social engineering, and best practices.</p>
+        </div>
+        <div class="service-card">
+          <div class="icon">🖥️</div>
+          <h4>SOC as a Service</h4>
+          <p>Continuous monitoring, SIEM integration, alerts, reporting.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      </aside>
-    </main>
+  <!-- Projects Section -->
+  <section class="projects-section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">My Work</p>
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-description">Research and development projects in cybersecurity and AI</p>
+      </div>
 
-    <footer>
-      © 2025 Bishwo Prakash Pokharel
-    </footer>
-  </div>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h4>Deepfake Detection Pipeline</h4>
+          <p>CNN/EfficientNet-based detection system with Grad-CAM explainability and reproducible pipelines for media manipulation detection.</p>
+          <div class="project-tags">
+            <span class="tag tag-secondary">Deep Learning</span>
+            <span class="tag tag-secondary">CNN</span>
+            <span class="tag tag-secondary">EfficientNet</span>
+            <span class="tag tag-secondary">Grad-CAM</span>
+            <span class="tag tag-secondary">Python</span>
+          </div>
+          <a href="https://github.com/bishwo-pp" class="project-link" target="_blank">View Project →</a>
+        </div>
+        <div class="project-card">
+          <h4>Agentic AI Forensics Assistant</h4>
+          <p>LLM-driven metadata analyzer with reasoning engine and Streamlit UI for automated cyber investigations.</p>
+          <div class="project-tags">
+            <span class="tag tag-secondary">LLM</span>
+            <span class="tag tag-secondary">AI Agents</span>
+            <span class="tag tag-secondary">Digital Forensics</span>
+            <span class="tag tag-secondary">Streamlit</span>
+            <span class="tag tag-secondary">Python</span>
+          </div>
+          <a href="https://github.com/bishwo-pp" class="project-link" target="_blank">View Project →</a>
+        </div>
+        <div class="project-card">
+          <h4>RF Signal Classifier (AutoGuardX)</h4>
+          <p>Spectrogram and FFT processing system for RF anomaly detection in wireless communications.</p>
+          <div class="project-tags">
+            <span class="tag tag-secondary">Signal Processing</span>
+            <span class="tag tag-secondary">FFT</span>
+            <span class="tag tag-secondary">Machine Learning</span>
+            <span class="tag tag-secondary">RF Security</span>
+          </div>
+          <a href="https://github.com/bishwo-pp" class="project-link" target="_blank">View Project →</a>
+        </div>
+        <div class="project-card">
+          <h4>LLM Threat Intelligence Tool</h4>
+          <p>Automated TTP extraction and structured malware triage summaries using large language models.</p>
+          <div class="project-tags">
+            <span class="tag tag-secondary">LLM</span>
+            <span class="tag tag-secondary">Threat Intelligence</span>
+            <span class="tag tag-secondary">Malware Analysis</span>
+            <span class="tag tag-secondary">NLP</span>
+          </div>
+          <a href="https://github.com/bishwo-pp" class="project-link" target="_blank">View Project →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Publications Section -->
+  <section class="publications-section" id="publications">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Research Output</p>
+        <h2 class="section-title">Research Publications</h2>
+        <p class="section-description">Peer-reviewed contributions to cybersecurity research</p>
+      </div>
+
+      <div class="publication-card">
+        <h4>blockHealthSecure: Integrating Blockchain and Cybersecurity in Post-Pandemic Healthcare Systems.</h4>
+        <p class="author">Pokharel, B.P. et al.</p>
+        <div class="meta">
+          <span>Information, 16(2), 133. • 2025</span>
+          <span class="publication-type">Journal</span>
+        </div>
+      </div>
+      <div class="publication-card">
+        <h4>SmartVAST: Vulnerability, attacks, security, and threats on smart cities with impact and ability in blockchain technology.</h4>
+        <p class="author">Pokharel, B.P. et al.</p>
+        <div class="meta">
+          <span>Deep Learning and Blockchain Technology for Smart and Sustainable Cities, 203–224 • 2025</span>
+          <span class="publication-type"> Book Chapter</span>
+        </div>
+      </div>
+      <div class="publication-card">
+        <h4>blockAuth: A Blockchain-Driven Framework for Verifiable Content Creation and Secure Distribution in the Generative AI Era</h4>
+        <p class="author">Pokharel, B.P. et al.</p>
+        <div class="meta">
+          <span>Advances in Computational Intelligence and Robotics, 99–136. • 2024</span>
+          <span class="publication-type">Book Chapter</span>
+        </div>
+      </div>
+      <div class="publication-card">
+        <h4>Blocklaw: Blockchain technology for Legal Automation and workflow -- cyber ethics and cybersecurity platforms.</h4>
+        <p class="author">Pokharel, B.P. et al.</p>
+        <div class="meta">
+          <span>arXiv.org • 2024</span>
+          <span class="publication-type">Journal</span>
+        </div>
+      </div>
+      <div class="publication-card">
+        <h4>Sentiment analysis using Hierarchical Multimodal Fusion (HMF)</h4>
+        <p class="author">Pokharel, B.P. et al.</p>
+        <div class="meta">
+          <span>World Journal of Advanced Research and Reviews, 14(3), 296–303. • 2022</span>
+          <span class="publication-type">Journal</span>
+        </div>
+      </div>
+      <div class="publication-card">
+        <h4>A comparative analysis of disk scheduling algorithms</h4>
+        <p class="author">Pokharel, B.P. et al.</p>
+        <div class="meta">
+          <span>International Journal for Research in Applied Sciences and Biotechnology, 8(2), 184–195. • 2021</span>
+          <span class="publication-type">Journal</span>
+        </div>
+      </div>
+      <div class="publication-card">
+        <h4>Twitter sentiment analysis during covid-19 outbreak in Nepal. </h4>
+        <p class="author">Pokharel, B.P. et al.</p>
+        <div class="meta">
+          <span>SSRN Electronic Journal. • 2020</span>
+          <span class="publication-type">Journal</span>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Ongoing Research Section -->
+  <section class="research-section" id="research">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">In Progress</p>
+        <h2 class="section-title">Ongoing Research</h2>
+        <p class="section-description">Active research initiatives and experimental projects</p>
+      </div>
+
+      <div class="research-grid">
+        <div class="research-card">
+          <h4>FUSE-VAPT</h4>
+          <p>Fusing OSINT and AI-ML for Intelligent Threat Intelligence in Vulnerability Assessment and Penetration Testing.</p>
+        </div>
+        <div class="research-card">
+          <h4>PMLA</h4>
+          <p>Personalized, Multilingual, and Adaptive Learning Analytics for Next-Generation Language Education.</p>
+        </div>
+        <div class="research-card">
+          <h4>AutoGuardX</h4>
+          <p>A Comprehensive Cybersecurity Framework for Connected Vehicles.</p>
+        </div>
+        <div class="research-card">
+          <h4>AI-Driven Clone Detection</h4>
+          <p>An Intelligent Approach to Preventing Mobile Application Replication.</p>
+        </div>
+        <div class="research-card">
+          <h4>AgIoT Framework</h4>
+          <p>AI-Driven Cybersecurity Threat Detection for Agricultural IoT Device with Blockchain Integration</p>
+        </div>
+        <div class="research-card">
+          <h4>agriTblock</h4>
+          <p>Blockchain for Transparent and Traceable Supply Chain in Agriculture</p>
+        </div>
+        <div class="research-card">
+          <h4>LLMs for Cybersecurity</h4>
+          <p>Deploying Large Language Models (LLMs) for Cybersecurity: Prospects, Challenges, and Future Directions.</p>
+        </div>
+        <div class="research-card">
+          <h4>AI-powered Vulnerability Identification and Management</h4>
+          <p>A Revolution in Cyber Threat Intelligence</p>
+        </div>
+        <div class="research-card">
+          <h4>Hybrid Cryptographic Systems</h4>
+          <p>The Need for Security, Cryptography, and Advancements</p>
+        </div>
+        <div class="research-card">
+          <h4>UAVchain</h4>
+          <p>A Study on Blockchain Technology Applications for Unmanned Aerial Vehicles (UAVs) – Safety, Security, Directions, and Challenges</p>
+        </div>
+        <div class="research-card">
+          <h4>Blockchain Integration in IT Infrastructure</h4>
+          <p>A Layered Approach to Cybersecurity and System Optimization</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Let's Talk</p>
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-description">Have a project in mind? Let's discuss how I can help.</p>
+        <a href="mailto:bishwo889@hotmail.com" class="btn btn-primary" style="margin-top: 32px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Send Message
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Bishwo Prakash Pokharel. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scroll for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
 </body>
 </html>
